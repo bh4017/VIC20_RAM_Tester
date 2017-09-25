@@ -1,0 +1,185 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:680XX-CPU-BJH
+LIBS:4000series-BJH
+LIBS:AMIGA-Custom-Chipset
+LIBS:Basics-BJH
+LIBS:buzzer
+LIBS:Connectors-BJH
+LIBS:Devices-BJH
+LIBS:LCD-BJH
+LIBS:MemoryDevices-BJH
+LIBS:Microchip-BJH
+LIBS:Modules-BJH
+LIBS:OpAmps-BJH
+LIBS:Opto-BJH
+LIBS:Oscillators-BJH
+LIBS:PowerSymbols-BJH
+LIBS:Regulators-BJH
+LIBS:Relays
+LIBS:Transistors-BJH
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R R?
+U 1 1 59C6865B
+P 3550 4150
+F 0 "R?" V 3630 4150 50  0000 C CNN
+F 1 "R" V 3550 4150 50  0000 C CNN
+F 2 "" V 3480 4150 50  0000 C CNN
+F 3 "" H 3550 4150 50  0000 C CNN
+	1    3550 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 59C686B0
+P 3550 4600
+F 0 "D?" H 3550 4700 50  0000 C CNN
+F 1 "LED" H 3550 4500 50  0000 C CNN
+F 2 "" H 3550 4600 50  0000 C CNN
+F 3 "" H 3550 4600 50  0000 C CNN
+	1    3550 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 59C687A0
+P 3550 6050
+F 0 "#PWR?" H 3550 5800 50  0001 C CNN
+F 1 "GND" H 3550 5900 50  0000 C CNN
+F 2 "" H 3550 6050 50  0000 C CNN
+F 3 "" H 3550 6050 50  0000 C CNN
+	1    3550 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 59C687D1
+P 2750 4150
+F 0 "R?" V 2830 4150 50  0000 C CNN
+F 1 "R" V 2750 4150 50  0000 C CNN
+F 2 "" V 2680 4150 50  0000 C CNN
+F 3 "" H 2750 4150 50  0000 C CNN
+	1    2750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 59C68836
+P 2750 4600
+F 0 "D?" H 2750 4700 50  0000 C CNN
+F 1 "LED" H 2750 4500 50  0000 C CNN
+F 2 "" H 2750 4600 50  0000 C CNN
+F 3 "" H 2750 4600 50  0000 C CNN
+	1    2750 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3550 4800 3550 4950
+Wire Wire Line
+	3550 4950 2750 4950
+Connection ~ 2750 4950
+$Comp
+L GND #PWR?
+U 1 1 59C68DCA
+P 2750 5100
+F 0 "#PWR?" H 2750 4850 50  0001 C CNN
+F 1 "GND" H 2750 4950 50  0000 C CNN
+F 2 "" H 2750 5100 50  0000 C CNN
+F 3 "" H 2750 5100 50  0000 C CNN
+	1    2750 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 4800 2750 5100
+Wire Wire Line
+	3550 4300 3550 4400
+Wire Wire Line
+	2750 4300 2750 4400
+$Comp
+L +5V_BJH #PWR?
+U 1 1 59C6937A
+P 2750 3250
+F 0 "#PWR?" H 2750 3440 20  0001 C CNN
+F 1 "+5V_BJH" H 2750 3440 51  0001 C CNN
+F 2 "" H 2750 3250 60  0001 C CNN
+F 3 "" H 2750 3250 60  0001 C CNN
+F 4 "+5V" H 2750 3450 60  0000 C CNB "NAME"
+	1    2750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_PMOS_GDS Q?
+U 1 1 59C76066
+P 2650 3700
+F 0 "Q?" H 2950 3750 50  0000 R CNN
+F 1 "Q_PMOS_GDS" H 3300 3650 50  0000 R CNN
+F 2 "" H 2850 3800 50  0000 C CNN
+F 3 "" H 2650 3700 50  0000 C CNN
+	1    2650 3700
+	1    0    0    1   
+$EndComp
+$Comp
+L Q_PMOS_GDS Q?
+U 1 1 59C7608F
+P 3450 3700
+F 0 "Q?" H 3750 3750 50  0000 R CNN
+F 1 "Q_PMOS_GDS" H 4100 3650 50  0000 R CNN
+F 2 "" H 3650 3800 50  0000 C CNN
+F 3 "" H 3450 3700 50  0000 C CNN
+	1    3450 3700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2750 3900 2750 4000
+Wire Wire Line
+	3550 3900 3550 4000
+Wire Wire Line
+	2750 3300 2750 3500
+Wire Wire Line
+	3550 3400 3550 3500
+Wire Wire Line
+	3550 3400 2750 3400
+Connection ~ 2750 3400
+$EndSCHEMATC

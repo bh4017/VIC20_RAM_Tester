@@ -19,3 +19,6 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+/RAM_Tester.X/nbproject/private/
+/RAM_Tester.X/dist/default/
+/RAM_Tester.X/build/default/
