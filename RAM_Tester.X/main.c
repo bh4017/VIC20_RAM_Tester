@@ -54,6 +54,13 @@ void setup_hardware(void)
     PIE1bits.TMR2IE = 0;    // Timer2 to PR2 match interrupt disabled
     
     PIE2 = 0x00;            // Disable all the peripheral interrupts in PIE2
+    
+    /* SETUP UART */
+    TXSTAbits.TX9 = 0;      // 8-bit mode
+    TXSTAbits.TXEN = 1;     // Transmit enabled
+    TXSTAbits.SYNC = 0;     // Asynchronous mode
+    TXSTAbits.BRGH = 0;     // Low speed mode
+    TXSTAbits
 }
 
 void main(void) 
