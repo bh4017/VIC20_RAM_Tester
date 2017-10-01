@@ -36,8 +36,24 @@ void setup_hardware(void)
     TRISA = 0;
     TRISCbits.TRISC5 = 0;
     TRISCbits.TRISC7 = 1;   // RC7 is the RS232 RX input
+    TRISCbits.TRISC6 = 0;   // RC6 is the RS232 TX output
     TRISB = 0x00;           // PortB is used for output (VIC20 address bus etc)
     
+    /* SETUP INTERRUPTS */
+    INTCONbits.GIE = 1;     // Enable all unmased interrupts
+    INTCONbits.PEIE = 1;    // Enable unmasked peripheral interrupts
+    INTCONbits.T0IE = 0;    // Timer 0 interrupt overflow disabled
+    INTCONbits.INTE = 0;    // External interrupt disabled
+    INTCONbits.RBIE = 0;    // PORTB change interrupt disabled
+    
+    PIE1bits.ADIE = 0;      // ADC interrupts disabled
+    PIE1bits.RCIE = 1;      // EUSART RX interrupts enabled
+    PIE1bits.TXIE = 0;      // EUSART TX interrupts disabled
+    PIE1bits.SSPIE = 0;     // MSSP interrupts disabled
+    PIE1bits.CCP1IE = 0;    // CCP1 interrupts disabled
+    PIE1bits.TMR2IE = 0;    // Timer2 to PR2 match interrupt disabled
+    
+    PIE2 = 0x00;            // Disable all the peripheral interrupts in PIE2
 }
 
 void main(void) 
